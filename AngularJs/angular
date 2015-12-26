@@ -1,0 +1,75 @@
+##Angular references:
+
++ ng-App: Define as fronteiras
+
+  <htm ng-App="NomeDoModulo">
+
+  //Arquivo Js separado
+  var app = angular.module("NomeDoModulo",[]); // [] Onde vc pode colocar os modulos aparte que vc quer ultilizar;
+
++ ng-Controler: Que faz o vinculo entre a view e o controller
+
+  var app = angular.module("NomeDoModulo",[]);
+  app.controler("NomeDoController", function($scope){ // $scope é o que faz a ponte entre a view e o controller, ambos os lados tem esse objeto compartilhado
+  });
+
++ ng-Bind: Ele substitui um elemento por uma expresão
+
+  //No Html
+  <h1 ng-Bing="appCtr"></h1>
+
+
+  //Arquivo Js separado
+  var app  = angular.module("NomeDoModulo",[]);
+  app.controller("NomeDoController", function($scope){
+
+    $scope.appCtr = "Hello, World";
+
+  });
+
+
++ ng-Repeat: Interando os os itens e uma coleção de objetos;
+
+  //No Html
+  <table>
+    <tr ng-Repeat="pessoa in pessoas">
+    <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.idade}}</td>
+    <tr>
+  </table>
+
+  OR
+
+  <table>
+    <tr ng-Repeat="pessoa in pessoas">
+    <td ng-Repeat="(key,value) in pessoa"> {{nome + ' - ' + value }} </td>
+
+    <tr>
+  </table>
+
+
+
+  //Js Separado
+  var app = angular.module("NomeDoModulo",[]);
+  app.controller("NomeDoController", function($scope){
+
+    $scope.pessoas = [
+      {nome:Leonardo, idade:19}
+      {nome:Neide, idade:20}
+      {nome:Natalia, idade:18}
+    ];
+
+  });
+
++ ng-Model: Ele faz o inverso do ng-bind, ele vincula uma propriedade ao $scope
+  O ng-Bind ele pega uma coisa do $scoope e exibe, e o ng-Mode pega uma coisa
+  da view e define no $scope;
+
+  //HTML
+
+  <input type="text" ng-Model="nome">
+  <input type="text" ng-Model="idade">
+  {{nome}}
+  {{idade}}
+
++ ng-Click: Atribui um evento ao comportamento;
