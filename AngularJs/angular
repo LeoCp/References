@@ -1,6 +1,6 @@
 ##Angular references:
 
-+ ng-App: Define as fronteiras
++ ng-App: Define as fronteiras, é a raiz
 
   <htm ng-App="NomeDoModulo">
 
@@ -26,7 +26,6 @@
     $scope.appCtr = "Hello, World";
 
   });
-
 
 + ng-Repeat: Interando os os itens e uma coleção de objetos;
 
@@ -67,9 +66,31 @@
 
   //HTML
 
-  <input type="text" ng-Model="nome">
-  <input type="text" ng-Model="idade">
+  <input type="text" ng-Model="nome"/>
+  <input type="text" ng-Model="idade"/>
   {{nome}}
   {{idade}}
 
 + ng-Click: Atribui um evento ao comportamento;
+
+  //HTML
+  <table>
+    <tr ng-repeat="pessoa in pessoas">
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.idade}}</td>
+    <tr>
+  </table>
+
+  <input type="text" ng-Model="pessoa.nome"/>
+  <input type="text" ng-Model="pessoa.idade"/>
+  <button ng-Click="addPessoa(pessoa)">Adicionar Pessoa</button>
+
+  //JS
+  var app = angular.module("NomeDoModulo", []);
+  app.controller("NomeDoController", function($scope){
+
+    $scope.addPessoa = function(pessoa){
+      $scope.pessoas.push(angular.copy(pessoa));
+      delete $scope.pessoa;
+    };
+  });
