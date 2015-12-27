@@ -94,3 +94,39 @@
       delete $scope.pessoa;
     };
   });
+
++ ng-Disable: Desabilita um elemento dinamicamente
+
+//Desabilita o botão se os campos nome e idade nao estiver preenchido
+<buton ng-disable="!pessoa.nome || !pessoa.idade"></button>
+
++ ng-Option: Renderiza as opções de um select;
+
+  //Js
+  var app = angular.module("NomeDoModulo",[]);
+  app.controller("NomeDoCtrl", function (){
+
+    $scope.operadoras = [
+      {nome: "Oi",codigo:14, categoria:"Celular"},
+      {nome: "Vivo",codigo:15, categoria:"Celular" },
+      {nome: "Tim",codigo:41, categoria:"Celular" },
+      {nome: "Gvt",codigo:25, categoria:"Fixo"},
+      {nome: "Embratel",codigo:21, categoria:"Fixo" }
+    ];
+
+  });
+
+  //Html
+  <slection ng-model="operadora.nome" ng-option="operadora.nome for operadora in operadoras">
+    <option value=""> Selecione uma operadora </option>
+  <selectio>
+
+  or
+
+  <slection ng-model="operadora.nome" ng-option="operadora.nome group by operadora.categoria for operadora in operadoras">
+    <option value=""> Selecione uma operadora </option>
+  <selectio>
+
++ ng-class e ng-style : aplica css dinamico;
+  - ng-class:
+  - ng-style:
