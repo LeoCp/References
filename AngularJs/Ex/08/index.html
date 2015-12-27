@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>ng-options</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_css/style.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="_js/angular.min.js"></script>
+    <script type="text/javascript" src="_js/script.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+    <div class="jumbotron">
+    <h2>Lista de contato</h2>
+    {{contato}}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Operadora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contato in contatos">
+          <td>{{contato.nome}}</td>
+          <td>{{contato.telefone}}</td>
+          <td>{{contato.operadora.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="text" class="form-control" ng-model="contato.nome" placeholder="Nome"/>
+    <input type="text" class="form-control" ng-model="contato.telefone" placeholder="Telefone"/>
+    <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+        <option value="">Selecione uma operadora</option>
+    </select>
+    <button type="button" class="btn btn-primary btn-block" ng-click="addContato(contato)"
+    ng-disabled="!contato.nome || !contato.telefone || !contato.operadora" >Cadastra</button>
+
+  </div>
+  </body>
+</html>
