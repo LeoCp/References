@@ -81,9 +81,9 @@
     <tr>
   </table>
 
-  <input type="text" ng-Model="pessoa.nome"/>
-  <input type="text" ng-Model="pessoa.idade"/>
-  <button ng-Click="addPessoa(pessoa)">Adicionar Pessoa</button>
+  <input type="text" ng-model="pessoa.nome"/>
+  <input type="text" ng-model="pessoa.idade"/>
+  <button ng-click="addPessoa(pessoa)">Adicionar Pessoa</button>
 
   //JS
   var app = angular.module("NomeDoModulo", []);
