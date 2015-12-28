@@ -129,4 +129,63 @@
 
 + ng-class e ng-style : aplica css dinamico;
   - ng-class:
+  1- Cenario fixo:
+
+      //Css
+      .selecionado {
+        backgroud-colod: #FFF2B0;
+      }
+      .negrito {
+       font-weight:bold;
+      }
+
+      //Js
+      var app = angular.module("app",[]);
+      app.controller("ctrl", function(){
+        $scope.classe1 = "selecionado";
+        $scope.classe2 = "negrito";
+      });
+
+      //Html
+      <tbody>
+        <tr ng-class="[classe1,classe2]">
+          <td>Nome</td>
+          <td>Idade</td>
+        </tr>
+      <tbody>
+
+  2- Cenario
+   // Css
+   .selecionado {
+     backgroud-colod: #FFF2B0;
+   }
+   .negrito {
+    font-weight:bold;
+   }
+
+   // Js
+   var app = angular.module("app",[]);
+   app.controller("ctrl", function($scope){
+    $scope.deletePessoas(pessoas){
+      $scope.pessoas = pessoas.filter(function (pessoa){
+        if(!pessoa.selecionado) return pessoa;
+      });
+    };
+    $scope.isPessoaSelecionado = function(pessoa){
+      return pessoa.some(function(pessoa){ //percorre o array 
+        return pessoa.selecionado;
+      });
+    };
+   });
+   // Html
+   <tbody>
+     <tr ng-class="{'selectionado negrito':pessoa.selecionado}">
+       <td><input type="checkbox" class="form-control" ng-model="pessoa.selecionado"/></td>
+       <td>Nome</td>
+       <td>Idade</td>
+     </tr>
+   <tbody>
+  <button class="btn btn-danger" ng-click="deleteContatos(contatos)" ng-disabled="!isContatoSelecionado(contatos)"/>
+
+
   - ng-style:
