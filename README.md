@@ -1,4 +1,5 @@
 # References
+## Como funciona o AngularJS
 ## Diretivas:
 ### ng-app:
 ### ng-controller:
