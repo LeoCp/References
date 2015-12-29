@@ -1,0 +1,14 @@
+.jumbotron{
+  width: 400px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selecionado {
+  background-color: #FFF2B0;
+}
+.negrito{
+  font-weight: bold;
+}

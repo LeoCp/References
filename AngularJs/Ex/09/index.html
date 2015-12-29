@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>ng-class</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_css/style.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="_js/angular.min.js"></script>
+    <script type="text/javascript" src="_js/script.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+    <div class="jumbotron">
+      <h2>Lista de pessoas</h2>
+      {{pessoa}}
+      <table class="table">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Idade</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="pessoa in pessoas" ng-class="{'selecionado negrito':pessoa.selecionado}">
+            <td><input type="checkbox" ng-model="pessoa.selecionado"/></td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.idade}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="text" class="form-control" placeholder="Nome" ng-model="pessoa.nome"/>
+      <input type="text" class="form-control" placeholder="Idade" ng-model="pessoa.idade"/><br>
+      <button type="button" class="btn btn-primary btn-block" ng-click="addPessoa(pessoa)" ng-disabled="!pessoa.nome || !pessoa.idade">Cadastrar</button>
+      <button type="button" class="btn btn-danger btn-block" ng-click="deletePessoa(pessoas)" ng-disabled="!isPessoasSelecionadas(pessoas)">Deletar</button>
+    </div>
+  </body>
+</html>
