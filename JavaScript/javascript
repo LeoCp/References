@@ -1,0 +1,54 @@
+O JavaScript tem alguns tipos de dados, o formato de dado que está disponível na linguagem de programação, de forma intrínseca.  Determina, os tipos de dados que poderemos utilizar em um programa sem precisar recorrer a definições particulares, que na maior parte das linguagem de programação pode ser utilizado para criar, de forma recursiva, ou não, tipos mais complexos  
+
+Tipos de dados simples: Number, String, Boolean, Undefined e Null. 
+
+estes tipos simples (primitivos) de dados são imutáveis, eles não podem ser alterados, enquanto os objetos podem.
+
+undefined :Significa na maioria das fezes que uma determinada variável foi criada mas não foi inicializada, ela foi criada mais nao inicializada,
+se aplicarmos este operador a uma variável que sequer foi declarada, ou seja, não existe de forma nenhuma também sera undefined.
+
+null: Trata-se de um ponteiro para um objeto vazio, ela existe, mas foi definida mas ainda não tem nenhum valor, aponta, consequentemente, para um objeto vazio.
+
+deixar o undefined para indicar ausência de valor a nível de erro, e utilizar o null para indicar ausências propositais a nível lógico.
+
+#Operadores:
+	
+	+ Atribuição:
+	 - += 
+	 - -= 
+	 - *= 
+	 - /= 
+	 - %= 
+	 - <<=
+	 - >>= 
+	 - >>>=
+ 	 - &= 
+	 - ^= 
+	 - |= 
+
+	+ Comparação	
+	+ Aritméticos
+	
+	+ Bit a bit
+	 - &
+   	 - a | b	
+	 - ^
+	 - ~ 
+	 - << 
+ 	 - >> 
+ 	 - >>> 
+
+	+ Lógicos
+	+ String
+	+ Especiais:
+	 - Condicional
+	 - Vírgula
+	 - Delete
+	 - In
+	 - Instanceof
+	 - New
+	 - This
+	 - Typeof
+	 - Void
+
+
