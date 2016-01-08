@@ -14,6 +14,13 @@ seis tipos de dados são os chamados primitivos, e os outros são tipos objetos
 
 ### Tipos primitivos:
 #### number:
+- <strong>toExponential:</strong>
+  <br>Retorna exponencial
+```
+var x = 100;
+x.toEsxponential() // '1e+2'
+```
+
 #### string;
 #### null;
 #### undefined;
