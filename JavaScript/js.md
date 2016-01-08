@@ -13,18 +13,18 @@ seis tipos de dados são os chamados primitivos, e os outros são tipos objetos
 
 
 ### Tipos primitivos:
-  #### number:
-  #### string;
-  #### null;
-  #### undefined;
-  #### boolean;
-  #### Symbol; // ECMAScript6
+#### number:
+#### string;
+#### null;
+#### undefined;
+#### boolean;
+#### Symbol; // ECMAScript6
 
 ### Tipos de Objetos:
-  #### array;
-  #### funcion;
-  #### date;
-  #### RegEx;
-  #### Error
+#### array;
+#### funcion;
+#### date;
+#### RegEx;
+#### Error
 
 
