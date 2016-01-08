@@ -26,7 +26,8 @@ Retorna uma string com casas depois da virgula
 var x = 3;
 x.toFixed(2) //'3.00'
 ```
-#### string;
+<strong>- toPrecision:</strong><br>
+#### string:
 #### null;
 #### undefined;
 #### boolean;
