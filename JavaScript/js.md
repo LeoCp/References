@@ -20,7 +20,12 @@ seis tipos de dados são os chamados primitivos, e os outros são tipos objetos
 var x = 100;
 x.toEsxponential() // '1e+2'
 ```
-
+<strong>- toFixed:</strong><br>
+Retorna uma string com casas depois da virgula
+```
+var x = 3;
+x.toFixed(2) //'3.00'
+```
 #### string;
 #### null;
 #### undefined;
