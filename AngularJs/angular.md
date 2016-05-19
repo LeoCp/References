@@ -20,6 +20,7 @@ angular.module("nomeDoModulo")
     };
 });
 ```
+## Propriedades 
 ### restrict:
 ### template:
 ### templateUrl:
