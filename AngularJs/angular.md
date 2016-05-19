@@ -23,12 +23,12 @@ angular.module("nomeDoModulo")
 ## Propriedades 
 ### restrict:
 A propriedade <strong>restrict</strong> é usada para especificar como a diretiva irá ser usada no  HTML. Os valores que podemos usar são:
-
-####A - Atributo
-####E - Elemento
-####C - Class
-####M - Comentário
-
+<ul>
+<li>A - Atributo</li>
+<li>E - Elemento</li>
+<li>C - Class</li>
+<li>M - Comentário</li>
+</ul>
 ### template:
 ### templateUrl:
 ### replace:
