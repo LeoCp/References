@@ -11,6 +11,15 @@
 ### ng-class:
 ### ng-style:
 ## Criar diretivas
+```javascript
+angular.module("nomeDoModulo")
+  .directive("nomeDaDiretiva", function () {
+    //Essa função retorna o objeto chamado Derective Definition Object
+    return {
+      //Propriedades da diretiva (define o comportamento da Diretiva)
+    };
+});
+```
 ### restrict:
 ### template:
 ### templateUrl:
